@@ -1,49 +1,54 @@
 # Movie Recommendation System — Semantic Similarity (NLP)
 
-This project demonstrates a simple **content-based recommendation system** using **semantic similarity techniques** in natural language processing (NLP). Using movie plot descriptions, the system identifies which film a user is most likely to enjoy next based on textual meaning rather than explicit ratings or metadata. The exercise focuses on **understanding and applying vector-based similarity**, rather than building a full-scale recommender engine.
+This project demonstrates a simple **content-based recommendation system** using **semantic similarity techniques** in natural language processing (NLP). Using movie plot descriptions, the system identifies which film a user is most likely to enjoy next based on textual meaning rather than explicit ratings or metadata.
+
+The exercise focuses on **understanding and applying vector-based similarity**, rather than building a full-scale recommendation engine.
 
 ![Comic book image of the Incredible Hulk running towards you with a sword raised in his right hand. He appears to be on the surface of a small, barren planet or moon. His mouth is open as if he is screaming a battle cry.](Planet-Hulk.jpg)
 
-*Image source: https://www.bigglasgowcomicpage.com/review-planet-hulk/*
+<sub>Image source: https://www.bigglasgowcomicpage.com/review-planet-hulk/</sub>
 
 ---
 
-### What’s in this repository
+## What’s in this repository
 
-- **Notebook:** semantic similarity implementation (`movies_task.ipynb`)  
-- **Dataset:** movie descriptions (`movies.txt`)  
-- **Requirements:** spaCy language model and Python dependencies (`requirements.txt`)
-
----
-
-### Project Context
-
-Modern recommendation systems often rely on understanding *semantic meaning* rather than surface-level keyword matching. Two movie descriptions may use different words while conveying similar themes, genres, or narrative structure. In this task, semantic similarity is used to compare movie descriptions and recommend the most similar title based on meaning alone.
+- **Jupyter Notebook:** semantic similarity implementation (`movies_task.ipynb`)  
+- **Dataset:** movie plot descriptions (`movies.txt`)  
+- **Requirements:** Python dependencies and spaCy language model (`requirements.txt`)  
 
 ---
 
-### Approach Overview
+## Project Context
 
-- Load a list of movie descriptions from a text file  
-- Use spaCy’s medium-sized language model (`en_core_web_md`)  
-- Convert descriptions into vector representations  
+Modern recommendation systems increasingly rely on understanding **semantic meaning** rather than surface-level keyword matching. Two movie descriptions may use different language while conveying similar themes, genres, or narrative structure.
+
+This project explores how semantic similarity can be used to compare movie descriptions and recommend a title based purely on meaning, using pre-trained word embeddings.
+
+---
+
+## Approach Overview
+
+The analysis follows a simple semantic similarity workflow:
+
+- Load movie descriptions from a text file  
+- Convert text into vector representations using spaCy  
 - Compute similarity scores between descriptions  
 - Identify the most semantically similar movie to *Planet Hulk*  
 
-The recommendation is based on the **highest cosine similarity score** between vectors.
+Recommendations are based on the **highest cosine similarity score** between text vectors.
 
 ---
 
-### Key Insights / Findings
+## Key Insights / Findings
 
-- Semantic similarity allows recommendations even when descriptions share few common words.  
-- The medium-sized spaCy model captures thematic relationships such as genre and narrative structure.  
-- Results depend heavily on the quality of the underlying word embeddings.  
-- This approach mirrors the foundational logic behind content-based recommendation systems.  
+- Semantic similarity enables meaningful recommendations even when descriptions share few common words.  
+- The spaCy medium-sized language model captures thematic and narrative relationships beyond keyword overlap.  
+- Recommendation quality is strongly influenced by the quality of the underlying word embeddings.  
+- This approach reflects the foundational logic behind many content-based recommendation systems.  
 
 ---
 
-### Skills Demonstrated
+## Skills Demonstrated
 
 **Analysis**
 - Interpretation of semantic similarity scores  
@@ -59,11 +64,11 @@ The recommendation is based on the **highest cosine similarity score** between v
 
 ---
 
-### Requirements
+## Requirements
 
-Install the required Python packages with: `pip install -r requirements.txt`
+Install the required Python packages with: `pip install -r requirements.txt`. *Note: this project also requires the spaCy language model *`en_core_web_md`.
 
 ---
 
-### Why this project belongs in my portfolio
-This project demonstrates my understanding of how semantic similarity can be applied to real-world recommendation problems. While intentionally small in scope, it highlights a key NLP concept that underpins many modern systems used for content discovery, search relevance, and personalised recommendations.
+## Why this project belongs in my portfolio
+This project demonstrates my understanding of how semantic similarity can be applied to real-world recommendation problems. While intentionally small in scope, it highlights a core NLP concept that underpins modern systems used for content discovery, search relevance, and personalised recommendations, and complements my broader work in natural language processing.
