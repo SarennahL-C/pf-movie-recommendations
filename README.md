@@ -59,9 +59,9 @@ The recommendation is based on the **highest cosine similarity score** between v
 
 ---
 
-### Requirements / How to Run
+### Requirements
 
-Install dependencies and the required language model using `requirements.txt`
+Install the required Python packages with: `pip install -r requirements.txt`
 
 ---
 
